@@ -1,0 +1,642 @@
+// Imports are like plug-ins or features
+import java.util.Random;
+import javax.swing.JOptionPane;
+public class GTUC {
+	// This is where the magic happens
+	public static void main(String[] args) {
+		// Introduction
+		JOptionPane.showMessageDialog(null, "Geeketek presents:\nGuess That Undertale Character: A Text-Based Guessing Game\nVersion 1.0.1. Press OK to start");
+		// Variable setup
+		Random randomGenerator = new Random();
+		boolean contGame = true;
+		int nullCount = 0;
+		// This is the big list of characters. The variables above and below the "while (contGame){" line are what chooses the characters
+		String[] undertaleNameList = {"Flowey", "Toriel", "Sans", "Frisk", "Papyrus", "Undyne", "Alphys", "Mettaton", "Asgore", "Asriel", "Chara", "Nice Cream Guy", "Gerson",
+				"Bratty and Catty", "Burgerpants", "Annoying Dog", "W.D. Gaster", "Monster Kid", "River Person", "Dummy", "Froggit", "Whimsun", "Loox", "Vegetoid", "Migosp",
+				"Moldsmal", "Nabstablook", "Snowdrake", "Ice Cap", "Lesser Dog", "Chilldrake", "Gyftrot", "Doggo", "Dogamy and Dogaressa", "Greater Dog", "Glyde", "Jerry",
+				"Aaron", "Woshua", "Moldbygg", "Shyren", "Mad Dummy", "Temmie", "Muffet", "Vulkin", "Tsunderplane", "Pyrope", "So Sorry", "Royal Guards", "Final Froggit",
+				"Whimsalot", "Astigmatism", "Madjick", "Knight Knight",  "Memory Head", "Endogeny", "Reaper Bird", "Lemon Bread", "Snowdrake's Mother"};
+		// When a certain error occurs within this code, end the program
+		try {
+			// While this is true, repeat over and over
+			while (contGame){
+				// This is in here so it can pick a different character each time
+				int namePicker = randomGenerator.nextInt(undertaleNameList.length);
+				String answer = undertaleNameList[namePicker];
+				String ans = "";
+				// If a certain character is picked from undertaleNameList, run this code
+				switch(answer){
+				case "Snowdrake's Mother":
+					ans = JOptionPane.showInputDialog(null, "Seems like it's losing itself.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Snowdrake's mother!");
+						nullCount += 1;
+						undertaleNameList[58] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Lemon Bread":
+					ans = JOptionPane.showInputDialog(null, "Welcome to my special hell.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Lemon Bread!");
+						nullCount += 1;
+						undertaleNameList[57] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Reaper Bird":
+					ans = JOptionPane.showInputDialog(null, "You picked on , . It seemed effective.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Reaper Bird!");
+						nullCount += 1;
+						undertaleNameList[56] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Endogeny":
+					ans = JOptionPane.showInputDialog(null, "It's unclear how many dogs this counts as.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Endogeny!");
+						nullCount += 1;
+						undertaleNameList[55] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Memory Head":
+					ans = JOptionPane.showInputDialog(null, "Come join the fun.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Memory Head!");
+						nullCount += 1;
+						undertaleNameList[54] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Knight Knight":
+					ans = JOptionPane.showInputDialog(null, "Good Knight.");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("knight")){
+						JOptionPane.showMessageDialog(null, "That's right, it is Knight Knight!");
+						nullCount += 1;
+						undertaleNameList[53] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Madjick":
+					ans = JOptionPane.showInputDialog(null, "Abra cadabra.");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("magic")){
+						JOptionPane.showMessageDialog(null, "That's right, it is Madjick!");
+						nullCount += 1;
+						undertaleNameList[52] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Astigmatism":
+					ans = JOptionPane.showInputDialog(null, "Smells like glasses.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Astigmatism!");
+						nullCount += 1;
+						undertaleNameList[51] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Whimsalot":
+					ans = JOptionPane.showInputDialog(null, "It finally stopped worrying.");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("whimsun")){
+						JOptionPane.showMessageDialog(null, "That's right, it is Whimsalot!");
+						nullCount += 1;
+						undertaleNameList[50] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Final Froggit":
+					ans = JOptionPane.showInputDialog(null, "Skip, jump.");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("froggit")){
+						JOptionPane.showMessageDialog(null, "That's right, it is Final Froggit!");
+						nullCount += 1;
+						undertaleNameList[49] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Royal Guards":
+					ans = JOptionPane.showInputDialog(null, "Like, team attack!");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("guards")){
+						JOptionPane.showMessageDialog(null, "That's right, it is the Royal Guards!");
+						nullCount += 1;
+						undertaleNameList[48] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "So Sorry":
+					ans = JOptionPane.showInputDialog(null, "I've messed up. I've really messed up.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is So Sorry!");
+						nullCount += 1;
+						undertaleNameList[47] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Pyrope":
+					ans = JOptionPane.showInputDialog(null, "Is it cold in here?");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Pyrope!");
+						nullCount += 1;
+						undertaleNameList[46] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Tsunderplane":
+					ans = JOptionPane.showInputDialog(null, "Smells like an airport perfume counter.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Tsunderplane!");
+						nullCount += 1;
+						undertaleNameList[45] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Vulkin":
+					ans = JOptionPane.showInputDialog(null, "Ah! I'll help! Healing magmas!");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Vulkin!");
+						nullCount += 1;
+						undertaleNameList[44] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Muffet":
+					ans = JOptionPane.showInputDialog(null, "...I think purple is a better loook on you! Ahuhuhu~");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Muffet!");
+						nullCount += 1;
+						undertaleNameList[43] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Temmie":
+					ans = JOptionPane.showInputDialog(null, "fhsdhjfdsfjsddshjfsd");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "hOI!!!!!! i'm tEMMIE!");
+						nullCount += 1;
+						undertaleNameList[42] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Mad Dummy":
+					ans = JOptionPane.showInputDialog(null, "FOOL! You think you can hurt ME??");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("dummy")){
+						JOptionPane.showMessageDialog(null, "That's right, it is Mad Dummy!");
+						nullCount += 1;
+						undertaleNameList[41] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Shyren":
+					ans = JOptionPane.showInputDialog(null, "(aggressive tooting)");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Shyren!");
+						nullCount += 1;
+						undertaleNameList[40] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Moldbygg":
+					ans = JOptionPane.showInputDialog(null, "Smells like a bait shop.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Moldbygg!");
+						nullCount += 1;
+						undertaleNameList[39] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Woshua":
+					ans = JOptionPane.showInputDialog(null, "Scrub a dub-dubs");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Woshua!");
+						nullCount += 1;
+						undertaleNameList[38] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Aaron":
+					ans = JOptionPane.showInputDialog(null, "This seahorse has a lot of HP (Horsepower)");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Aaron!");
+						nullCount += 1;
+						undertaleNameList[37] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Jerry":
+					ans = JOptionPane.showInputDialog(null, "Man, the wifi sucks here.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "Um, yeah, it's Jerry. Good job.");
+						nullCount += 1;
+						undertaleNameList[36] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Glyde":
+					ans = JOptionPane.showInputDialog(null, "Sorry... for NOTHING *ollies*.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Glyde!");
+						nullCount += 1;
+						undertaleNameList[35] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Greater Dog":
+					ans = JOptionPane.showInputDialog(null, "It's so excited that it thinks fighting is just play.");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("dog")){
+						JOptionPane.showMessageDialog(null, "That's right, it is Greater Dog!");
+						nullCount += 1;
+						undertaleNameList[34] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Dogamy and Dogaressa":
+					ans = JOptionPane.showInputDialog(null, "A new world has opened up for us...");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("dogi") || ans.equalsIgnoreCase("dogamy") || ans.equalsIgnoreCase("dogaressa") || ans.equalsIgnoreCase("dog")){
+						JOptionPane.showMessageDialog(null, "That's right, it is Dogamy and Dogaressa!");
+						nullCount += 1;
+						undertaleNameList[33] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Doggo":
+					ans = JOptionPane.showInputDialog(null, "Hobbies include: squirrels.");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("dog")){
+						JOptionPane.showMessageDialog(null, "That's right, it is Doggo!");
+						nullCount += 1;
+						undertaleNameList[32] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Gyftrot":
+					ans = JOptionPane.showInputDialog(null, "Some teens 'decorated' it as a prank.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Gyftrot!");
+						nullCount += 1;
+						undertaleNameList[31] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Chilldrake":
+					ans = JOptionPane.showInputDialog(null, "*turns up music all the way*");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Chilldrake!");
+						nullCount += 1;
+						undertaleNameList[30] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Lesser Dog":
+					ans = JOptionPane.showInputDialog(null, "Perhaps mankind was not meant to pet this much.");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("dog")){
+						JOptionPane.showMessageDialog(null, "That's right, it is Lesser Dog!");
+						nullCount += 1;
+						undertaleNameList[29] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Ice Cap":
+					ans = JOptionPane.showInputDialog(null, "Your head looks so.. NAKED!");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Ice Cap!");
+						nullCount += 1;
+						undertaleNameList[28] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Snowdrake":
+					ans = JOptionPane.showInputDialog(null, "This teen comedian fights to keep a captive audience.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Snowdrake!");
+						nullCount += 1;
+						undertaleNameList[27] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Nabstablook":
+					ans = JOptionPane.showInputDialog(null, "REALLY NOT FEELIN UP TO IT RIGHT NOW. SORRY.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Nabstablook!");
+						nullCount += 1;
+						undertaleNameList[26] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Moldsmal":
+					ans = JOptionPane.showInputDialog(null, "Stereotypical: Curvaceously attractive, but no brains...");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Moldsmal!");
+						nullCount += 1;
+						undertaleNameList[25] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Migosp":
+					ans = JOptionPane.showInputDialog(null, "It seems evil, but it's just with the wrong crowd...");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "Mm, cha cha cha! (It is Migosp!)");
+						nullCount += 1;
+						undertaleNameList[24] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Vegetoid":
+					ans = JOptionPane.showInputDialog(null, "Not monitored by the USDA.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Vegetoid!");
+						nullCount += 1;
+						undertaleNameList[23] = "null";
+					} else if (ans.equalsIgnoreCase("vegeta")){
+						JOptionPane.showMessageDialog(null, "IT'S OVER 9000!");
+						nullCount += 1;
+						undertaleNameList[23] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Loox":
+					ans = JOptionPane.showInputDialog(null, "Family name: Eyewalker.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Loox!");
+						nullCount += 1;
+						undertaleNameList[22] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Whimsun":
+					ans = JOptionPane.showInputDialog(null, "This monster is too sensitive to fight...");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "Halfway through your first word, Whimsun bursts into tears and runs away.");
+						nullCount += 1;
+						undertaleNameList[21] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Froggit":
+					ans = JOptionPane.showInputDialog(null, "Life is difficult for this enemy.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Froggit!");
+						nullCount += 1;
+						undertaleNameList[20] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Dummy":
+					ans = JOptionPane.showInputDialog(null, "_____ tires of your aimless shenanigans.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is the Dummy!");
+						nullCount += 1;
+						undertaleNameList[19] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "River Person":
+					ans = JOptionPane.showInputDialog(null, "Tra la la.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is the River Person!");
+						nullCount += 1;
+						undertaleNameList[18] = "null";
+					} else if (ans.equalsIgnoreCase("herman")){
+						JOptionPane.showMessageDialog(null, "An AU person? Is this a secret? Wink wink...");
+						nullCount += 1;
+						undertaleNameList[18] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Monster Kid":
+					ans = JOptionPane.showInputDialog(null, "... man, I should REALLY go home...");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("kid")){
+						JOptionPane.showMessageDialog(null, "That's right, it is Monster Kid!");
+						nullCount += 1;
+						undertaleNameList[17] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "W.D. Gaster":
+					ans = JOptionPane.showInputDialog(null, "Dark, darker, yet darker.");
+					if (ans.equalsIgnoreCase("gaster") || ans.equalsIgnoreCase("w d gaster") || ans.equalsIgnoreCase("w. d. gaster")){
+						JOptionPane.showMessageDialog(null, "That's right, it is W.D. Gaster!");
+						nullCount += 1;
+						undertaleNameList[16] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect! (You may need to spell it differently next time)");
+					}
+					break;
+				case "Annoying Dog":
+					ans = JOptionPane.showInputDialog(null, "You deployed the ___.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is the Annoying Dog!");
+						nullCount += 1;
+						undertaleNameList[15] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Burgerpants":
+					ans = JOptionPane.showInputDialog(null, "I can't go to hell. I'm all out of vacation days. \n(oooOOOOOOOOOHHHHHHHHH!)");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Burgerpants!");
+						nullCount += 1;
+						undertaleNameList[14] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Bratty and Catty":
+					ans = JOptionPane.showInputDialog(null, "Wait! I'll pay you 1000G if you get Mettaton to autograph my butt!");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("bratty") || ans.equalsIgnoreCase("catty")){
+						JOptionPane.showMessageDialog(null, "That's right, it is Bratty and Catty!");
+						nullCount += 1;
+						undertaleNameList[13] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Gerson":
+					ans = JOptionPane.showInputDialog(null, "Whoa there! I got some neat junk for sale.");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("turtle")){
+						JOptionPane.showMessageDialog(null, "That's right, it is Gerson!");
+						nullCount += 1;
+						undertaleNameList[12] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Nice Cream Guy":
+					ans = JOptionPane.showInputDialog(null, "Tell your friends... There's ice cream...\nHidden in the depths of a watery cavern....");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("nice cream") || ans.equalsIgnoreCase("ice cream guy") || ans.equalsIgnoreCase("ice cream")){
+						JOptionPane.showMessageDialog(null, "That's right, it is Nice Cream Guy!");
+						nullCount += 1;
+						undertaleNameList[11] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Chara":
+					ans = JOptionPane.showInputDialog(null, "You think you are above consequences.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Chara!");
+						nullCount += 1;
+						undertaleNameList[10] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Asriel":
+					ans = JOptionPane.showInputDialog(null, "Legendary being made of every SOUL in the Underground.");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("god of hyperdeath") || ans.equalsIgnoreCase("asriel dreemurr")){
+						JOptionPane.showMessageDialog(null, "That's right, it is Asriel!");
+						nullCount += 1;
+						undertaleNameList[9] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Asgore":
+					ans = JOptionPane.showInputDialog(null, "It was nice to meet you.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is King Fluffybu- I mean Asgore!");
+						nullCount += 1;
+						undertaleNameList[8] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Mettaton":
+					ans = JOptionPane.showInputDialog(null, "Knock 'em dead, darling.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Mettaton!");
+						nullCount += 1;
+						undertaleNameList[7] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Alphys":
+					ans = JOptionPane.showInputDialog(null, "Have you ever tried turning it off and on again?");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "Th-that's right, i-it is A-Alphys.");
+						nullCount += 1;
+						undertaleNameList[6] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Undyne":
+					ans = JOptionPane.showInputDialog(null, "______ suplexes a huge boulder, just because she can.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Undyne!");
+						nullCount += 1;
+						undertaleNameList[5] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Papyrus":
+					ans = JOptionPane.showInputDialog(null, "I WILL CAPTURE A HUMAN!");
+					if (ans.equalsIgnoreCase(answer) || ans.equalsIgnoreCase("papy")){
+						JOptionPane.showMessageDialog(null, "NYEH HEH HEH! IT IS I, THE GREAT PAPYRUS!");
+						nullCount += 1;
+						undertaleNameList[4] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Frisk":
+					ans = JOptionPane.showInputDialog(null, "The only character that never speaks in the game.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Frisk!");
+						nullCount += 1;
+						undertaleNameList[3] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Sans":
+					ans = JOptionPane.showInputDialog(null, "i'm sorry, old lady.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Sans!");
+						nullCount += 1;
+						undertaleNameList[2] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Toriel":
+					ans = JOptionPane.showInputDialog(null, "It is called '72 Uses for Snails.'");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Toriel!");
+						nullCount += 1;
+						undertaleNameList[1] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+				case "Flowey":
+					ans = JOptionPane.showInputDialog(null, "You're empty inside. Just like me.");
+					if (ans.equalsIgnoreCase(answer)){
+						JOptionPane.showMessageDialog(null, "That's right, it is Flowey!");
+						nullCount += 1;
+						undertaleNameList[0] = "null";
+					} else {
+						JOptionPane.showMessageDialog(null, "Incorrect!");
+					}
+					break;
+					// If come across "null", check whether a counter is at a certain number, then repeat. If counter is at set number, end the game.
+				case "null":
+					if (nullCount == undertaleNameList.length){
+						JOptionPane.showMessageDialog(null, "You've guessed all the characters! Thanks for playing.\nClick OK to close the game.");
+						contGame = false;
+						System.exit(0);
+					}
+					break;
+				}
+			}
+			// Do this when this error type is found
+		} catch (NullPointerException a){
+			System.exit(0);
+		}
+	}
+}
