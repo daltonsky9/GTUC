@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+<title>GTUC</title>
+<link type="text/css" rel="stylesheet" href="css/main.css" />
+<script>
+// When you press START, this function is activated
+
+var game = function() {
+	// Variable setup
+    var contGame = true;
+    var wrongAnswers = 0;
+    var userAnswer = "";
+    var namesDone = 0;
+    var nameList = ["Flowey", "Toriel", "Sans", "Frisk", "Papyrus", "Undyne", "Alphys", "Mettaton", "Asgore", "Asriel", "Chara", "Nice Cream Guy", "Gerson", "Bratty and Catty", "Burgerpants", "Annoying Dog", "W.D. Gaster", "Monster Kid", "River Person", "Dummy", "Froggit", "Whimsun", "Loox", "Vegetoid", "Migosp", "Moldsmal", "Nabstablook", "Snowdrake", "Ice Cap", "Lesser Dog", "Chilldrake", "Gyftrot", "Doggo", "Dogamy and Dogaressa", "Greater Dog", "Glyde", "Jerry", "Aaron", "Woshua", "Moldbygg", "Shyren", "Mad Dummy", "Temmie", "Muffet", "Vulkin", "Tsunderplane", "Pyrope", "So Sorry", "Royal Guards", "Final Froggit", "Whimsalot", "Astigmatism", "Madjick", "Knight Knight", "Memory Head", "Endogeny", "Reaper Bird", "Lemon Bread", "Snowdrake's Mother"];
+	// Asks player if they want to play plus intro
+	var userPlay = prompt("Welcome to Guess That Undertale Character by Geeketek! Answer yes to start playing. Answer anything else to not play. If you answer a hint with no characters, then the game will end.");
+	// While not all the characters have been guessed correctly and user wants to play, do this
+    while (contGame && userPlay === "yes") {
+		// These variables are temporary after each run of the switch below, and select a random name from the list above
+        var randomNumber = Math.floor(Math.random() * nameList.length);
+        var chosenName = nameList[randomNumber].toLowerCase();
+		// This responds with a certain set of code depending on which name is called
+        switch (chosenName) {
+			/* Character Template (copy and paste):
+ 			case "":
+				userAnswer = prompt("");
+				if (userAnswer === chosenName){
+					alert("");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break; */
+
+ 			case "flowey":
+				userAnswer = prompt("You're empty inside. Just like me.");
+				if (userAnswer === chosenName){
+					alert("You are an idiot, except this time. Howdy, I'm Flowey!");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "toriel":
+				userAnswer = prompt("It is called '72 Uses for Snails.'");
+				if (userAnswer === chosenName || userAnswer === "toriel dreemurr"){
+					alert("Correct! It is Toriel.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "sans":
+				userAnswer = prompt("i'm sorry, old lady.");
+				if (userAnswer === chosenName){
+					alert("correct, bro. it's me, sans.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "frisk":
+				userAnswer = prompt("The only character that never speaks in the game.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Frisk.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "papyrus":
+				userAnswer = prompt("I WILL CAPTURE A HUMAN!");
+				if (userAnswer === chosenName){
+					alert("NYEH HEH HEH! IT IS I, THE GREAT PAPYRUS!");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "undyne":
+				userAnswer = prompt("______ suplexes a huge boulder, just because she can.");
+				if (userAnswer === chosenName){
+					alert("NGAAAHHH!!! YOU ARE CORRECT, IT IS UNDYNE!!!");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "alphys":
+				userAnswer = prompt("Have you ever tried turning it off and on again?");
+				if (userAnswer === chosenName){
+					alert("C-Correct! It is A-Alphys.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "mettaton":
+				userAnswer = prompt("Knock 'em dead, darling.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Mettaton.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "asgore":
+				userAnswer = prompt("It was nice to meet you.");
+				if (userAnswer === chosenName || userAnswer === "asgore dreemurr"){
+					alert("Correct! It is King Fluffybu-- I mean Asgore Dreemurr!");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "asriel":
+				userAnswer = prompt("Legendary being made of every SOUL in the Underground.");
+				if (userAnswer === chosenName || userAnswer === "flowey" || userAnswer === "asriel dreemurr"){
+					alert("Correct! It's your best friend, Asriel.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "chara":
+				userAnswer = prompt("You think you are above consequences.");
+				if (userAnswer === chosenName){
+					alert("Correct! It's me, Chara.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "nice cream guy":
+				userAnswer = prompt("Tell your friends... There's ice cream...\nHidden in the depths of a watery cavern....");
+				if (userAnswer === chosenName || userAnswer === "nice cream"){
+					alert("Correct! It is the Nice Cream Guy.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "gerson":
+				userAnswer = prompt("Whoa there! I got some neat junk for sale.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Gerson.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "bratty and catty":
+				userAnswer = prompt("Wait! I'll pay you 1000G if you get Mettaton to autograph my butt!");
+				if (userAnswer === chosenName || userAnswer === "bratty" || userAnswer === "catty"){
+					alert("Correct! It is Bratty and Catty.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "burgerpants":
+				userAnswer = prompt("I can't go to hell. I'm all out of vacation days. \n(oooOOOOOOOOOHHHHHHHHH!)");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Burgerpants.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "annoying dog":
+				userAnswer = prompt("You deployed the ___.");
+				if (userAnswer === chosenName || userAnswer === "dog"){
+					alert("Correct! It is Annoying Dog.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "w.d. gaster":
+				userAnswer = prompt("Dark, darker, yet darker.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is W.D. Gaster.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "monster kid":
+				userAnswer = prompt("... man, I should REALLY go home...");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Monster Kid.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "river person":
+				userAnswer = prompt("Tra la la.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is the River Person.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+				
+ 			case "dummy":
+				userAnswer = prompt("_____ tires of your aimless shenanigans.");
+				if (userAnswer === chosenName){
+					alert("Dummy tires of your aimless shenanigans.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+				
+ 			case "froggit":
+				userAnswer = prompt("Life is difficult for this enemy.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Froggit.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+				
+ 			case "whimsun":
+				userAnswer = prompt("This monster is too sensitive to fight...");
+				if (userAnswer === chosenName){
+					alert("Halfway through your first word, Whimsun bursts into tears and runs away.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+				
+ 			case "loox":
+				userAnswer = prompt("Family name: Eyewalker.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Loox.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+				
+ 			case "vegetoid":
+				userAnswer = prompt("Not monitored by the USDA.");
+				if (userAnswer === chosenName){
+					alert("Correct! IT'S OVER 900- I mean Vegetoid.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+				
+ 			case "migosp":
+				userAnswer = prompt("It seems evil, but it's just with the wrong crowd...");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Migosp.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+				
+ 			case "moldsmal":
+				userAnswer = prompt("Stereotypical: Curvaceously attractive, but no brains...");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Moldsmal.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+				
+			case "nabstablook":
+				userAnswer = prompt("REALLY NOT FEELIN UP TO IT RIGHT NOW. SORRY.");
+				if (userAnswer === chosenName){
+					alert("congratulations... it's me, nabstablook... yay...");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+			case "snowdrake":
+				userAnswer = prompt("This teen comedian fights to keep a captive audience.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Snowdrake.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+			case "ice cap":
+				userAnswer = prompt("Your head looks so.. NAKED!");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Ice Cap.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+			case "lesser dog":
+				userAnswer = prompt("Perhaps mankind was not meant to pet this much.");
+				if (userAnswer === chosenName || userAnswer === "dog"){
+					alert("Correct! It is Lesser Dog.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+				
+ 			case "chilldrake":
+				userAnswer = prompt("*turns up music all the way*");
+				if (userAnswer === chosenName){
+					alert("Just chill, bruh, your're correct, it is Chilldrake, man.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "gyftrot":
+				userAnswer = prompt("Some teens 'decorated' it as a prank.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Gyftrot.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "doggo":
+				userAnswer = prompt("Hobbies include: squirrels.");
+				if (userAnswer === chosenName || userAnswer === "dog"){
+					alert("Correct! It is Doggo.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "dogamy and dogaressa":
+				userAnswer = prompt("A new world has opened up for us...");
+				if (userAnswer === chosenName || userAnswer === "dogamy" || userAnswer === "dogaressa" || userAnswer === "dogi" || userAnswer === "dog"){
+					alert("Correct! It is Dogamy or Dogaressa or Dogi! (all are correct in this case)");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "greater dog":
+				userAnswer = prompt("It's so excited that it thinks fighting is just play.");
+				if (userAnswer === chosenName || userAnswer === "dog"){
+					alert("Correct! it is Greater Dog (the big one).");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "glyde":
+				userAnswer = prompt("Sorry... for NOTHING *ollies*.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Glyde.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "jerry":
+				userAnswer = prompt("Man, the wifi sucks here.");
+				if (userAnswer === chosenName){
+					alert("Nobody likes Jerry, but correct.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "aaron":
+				userAnswer = prompt("This seahorse has a lot of HP (Horsepower)");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Aaron.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "woshua":
+				userAnswer = prompt("Scrub a dub-dubs");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Woshua.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "moldbygg":
+				userAnswer = prompt("Smells like a bait shop.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Moldbygg.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+			case "shyren":
+				userAnswer = prompt("(aggressive tooting)");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Shyren.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "mad dummy":
+				userAnswer = prompt("FOOL! You think you can hurt ME??");
+				if (userAnswer === chosenName){
+					alert("Correct! It is the Mad Dummt!");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "temmie":
+				userAnswer = prompt("fhsdhjfdsfjsddshjfsd");
+				if (userAnswer === chosenName){
+					alert("coRECT! it IS da TEMMIE!");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "muffet":
+				userAnswer = prompt("...I think purple is a better loook on you! Ahuhuhu~");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Muffet.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "vulkin":
+				userAnswer = prompt("Ah! I'll help! Healing magmas!");
+				if (userAnswer === chosenName){
+					alert("Live long and pro-- I mean correct, it is Vulkin!");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "tsunderplane":
+				userAnswer = prompt("Smells like an airport perfume counter.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Tsunderplane.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "pyrope":
+				userAnswer = prompt("Is it cold in here?");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Pyrope.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "so sorry":
+				userAnswer = prompt("I've messed up. I've really messed up.");
+				if (userAnswer === chosenName){
+					alert("I'm So Sorry! Your answer is correct.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "royal guards":
+				userAnswer = prompt("Like, team attack!");
+				if (userAnswer === chosenName){
+					alert("Correct! It is the Royal Guards.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "final froggit":
+				userAnswer = prompt("Skip, jump.");
+				if (userAnswer === chosenName || userAnswer === "froggit"){
+					alert("Correct! It is Final Froggit.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "whimsalot":
+				userAnswer = prompt("It finally stopped worrying.");
+				if (userAnswer === chosenName || userAnswer === "whimsun"){
+					alert("Correct! It is Whimsalot.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "astigmatism":
+				userAnswer = prompt("Smells like glasses.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Astigmatism.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "madjick":
+				userAnswer = prompt("Abra cadabra.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Madjick.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+			case "knight knight":
+				userAnswer = prompt("Good Knight.");
+				if (userAnswer === chosenName || userAnswer === "knight"){
+					alert("Correct! It is Knight Knight.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "memory head":
+				userAnswer = prompt("Come join the fun.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Memory Head.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+ 			case "endogeny":
+				userAnswer = prompt("It's unclear how many dogs this counts as.");
+				if (userAnswer === chosenName || userAnswer === "dog"){
+					alert("Correct! It is Endogeny.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+			case "reaper bird":
+				userAnswer = prompt("You picked on , . It seemed effective.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is the Reaper Bird.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+				
+			case "lemon bread":
+				userAnswer = prompt("Welcome to my special hell.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Lemon Bread.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+			case "snowdrake's mother":
+				userAnswer = prompt("Seems like it's losing itself.");
+				if (userAnswer === chosenName){
+					alert("Correct! It is Snowdrake's mother.");
+					namesDone += 1;
+					nameList[randomNumber] = "";
+				} else {
+					alert("Incorrect! It is not " + userAnswer);
+					wrongAnswers += 1;
+				}
+				break;
+
+            default:
+                if (namesDone === nameList.length) {
+                    contGame = false;
+                    if (wrongAnswers === 0){
+                        alert("Congrats! You finished the game with no errors! Good job.");
+                    } else if (wrongAnswers < 10){
+                        alert("Congrats! You finished the game with few errors! Keep it going. (You made " + wrongAnswers + " errors)");
+                    } else {
+                        alert("Congrats! You finished the game, but you made some errors. Try again to get a better score! (You made " + wrongAnswers + " errors)");
+                    }
+                }
+        }
+
+		if (userAnswer === ""){
+			contGame = false;
+		}
+    }
+};
+</script>
+<style>
+	body {
+		font-family: "Verdana";
+	}
+</style>
+</head>
+<body>
+<h1>Guess That Undertale Character:</h1>
+<h2>A Text-Based Guessing Game created by Geeketek</h2>
+<h5>Browser Version 1.0.0 (the game version, not your web browser)</h5>
+<p>Click Start to play (make sure pop up messages are enabled).</p>
+<br>
+<button type="button" onClick="game();">Start</button>
+<br>
+<br>
+<h3>Terms and Conditions</h3>
+<p>THIS GAME IS IN AN EARLY DEVELOPMENT STAGE AND MAY CRASH YOUR BROWSER. Save your work on any tabs you have open before playing this game.</p>
+<p>I am not responsible for any damage created by you. Only play this game off of <a href="http://gamejolt.com/games/guess-that-undertale-character-beta/161325">GameJolt</a> or <a href="http://geeketekgames.weebly.com/">my site</a>.</p>
+<body>
+</html>	
